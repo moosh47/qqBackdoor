@@ -34,7 +34,6 @@ minecraft {
     version = project.forgeVersion
     runDir = 'run'
     mappings = project.mcpVersion
-    coreMod = 'me.earth.phobos.mixin.PhobosMixinLoader'
     makeObfSourceJar = false
 }
 
@@ -101,10 +100,8 @@ jar {
     manifest {
         attributes(
                 'MixinConfigs': 'mixins.phobos.json',
-                'tweakClass': 'org.spongepowered.asm.launch.MixinTweaker',
                 'TweakOrder': 0,
                 'FMLCorePluginContainsFMLMod': 'true',
-                'FMLCorePlugin': 'me.earth.phobos.mixin.PhobosMixinLoader',
                 'ForceLoadAsMod': 'true',
                 'FMLAT': 'phobos_at.cfg'
         )
